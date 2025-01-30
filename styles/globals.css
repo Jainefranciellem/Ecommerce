@@ -30,7 +30,7 @@ body {
 }
 
 .logo span {
-  color: aliceblue;
+  color: #f1d8baed;
 }
 
 nav ul {
@@ -54,7 +54,7 @@ nav ul {
 }
 
 nav ul li {
-  color: aliceblue;
+  color: radial-gradient(#fff, #99590a80);
   margin-right: 1.5rem;
   cursor: pointer;
 }
@@ -70,7 +70,7 @@ nav ul li:hover {
 }
 
 header {
-  background-image: radial-gradient(#fff, #99580aed);
+  background-image: radial-gradient(#fff, #99590a80);
 }
 
 .header-bottom-side {
@@ -105,5 +105,137 @@ header {
 }
 
 .header-bottom-side-right img {
-  width: 100%;
+  width: 80%;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .header-bottom-side {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+
+  }
+
+  nav {
+    position: absolute;
+    background-color: #99580aed;
+    width: 100%;
+    top: 69px;
+    display: none;
+  }
+
+  .show-menu nav {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 0.8rem;
+  }
+}
+
+
+.page-inner-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cols {
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4rem 1rem;
+}
+
+.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cols>* {
+  cursor: pointer;
+  transition: all 0.2;
+}
+
+.cols>*:hover {
+  transform: translate(-5px);
+}
+
+.gray-background {
+  background-image: radial-gradient(#fff, #99590a80);
+  margin-top: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.8rem;
+}
+
+.subtitle-underline {
+  width: 100px;
+  height: 5px;
+  background-color: #99580aed;
+  border-radius: 9999px;
+  margin: 8px auto 0 auto;
+}
+
+.products {
+  color: #2c2c2c;
+  width: 200px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-weight: 600;
+  margin-top: 0.4rem;
+
+}
+
+.rate {
+  color: #99580aed;
+  font-size: 1.3rem;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+    justify-self: center;
+  }
+
+  .cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products {
+    width: 150px;
+  }
+
 }
